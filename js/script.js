@@ -35,7 +35,7 @@ var typed = new Typed('.typer', {
     strings: [
         "Web System and Technologies",
         "Activity #3 and #4",
-        "CSS3 Robot Web Art",
+        "CSS3 Robot Animation",
         "Namias, Jhon Keneth Ryan B."
     ],
     typeSpeed: 30,
