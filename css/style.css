@@ -788,9 +788,34 @@ lower-box {
     width: 40px;
 }
 
+/* ==================================================
+                 Spider Robot Web Art
+================================================== */
+.leg-1,
+.leg-4 {
+    animation: walking 1s infinite linear;
+}
 
+.leg-2,
+.leg-3 {
+    animation: walking-b 1s infinite linear;
+}
 
+.leg-1 {
+    animation-delay: 0s;
+}
 
+.leg-2 {
+    animation-delay: .8s;
+}
+
+.leg-3 {
+    animation-delay: .5s;
+}
+
+.leg-4 {
+    animation-delay: .3s;
+}
 
 .spider-robot {
     height: 100%;
@@ -811,6 +836,7 @@ lower-box {
     border: 15px solid #000;
     box-shadow: inset -40px -80px 0px 0px #7f7f7f;
     -moz-box-shadow: inset -40px -80px 0px 0px #7f7f7f;
+    animation: head 1s infinite linear;
 }
 
 .border {
@@ -931,14 +957,6 @@ lower-box {
     transform: rotate(330deg);
 }
 
-
-
-
-
-
-
-
-
 .leg-1 {
     margin: 321px 0 0 232px;
     height: 450px;
@@ -981,8 +999,6 @@ lower-box {
     border-radius: 50%;
     position: absolute;
 }
-
-
 
 .leg-2 {
     margin: 262px 0 0 1061px;
@@ -1068,7 +1084,6 @@ lower-box {
     position: absolute;
 }
 
-
 .leg-4 {
     margin: 300px 0 0 635px;
     height: 350px;
@@ -1078,6 +1093,7 @@ lower-box {
     border: 15px solid #000;
     -webkit-clip-path: polygon(34% 90%, 59% 91%, 60% 76%, 60% 63%, 60% 51%, 59% 41%, 57% 33%, 55% 25%, 52% 20%, 42% 18%, 35% 18%, 28% 20%, 23% 23%, 18% 26%, 15% 29%, 13% 31%, 20% 41%, 23% 48%, 27% 56%, 29% 63%, 31% 70%, 33% 76%, 33% 81%);
     clip-path: polygon(34% 90%, 59% 91%, 60% 76%, 60% 63%, 60% 51%, 59% 41%, 57% 33%, 55% 25%, 52% 20%, 42% 18%, 35% 18%, 28% 20%, 23% 23%, 18% 26%, 15% 29%, 13% 31%, 20% 41%, 23% 48%, 27% 56%, 29% 63%, 31% 70%, 32% 76%, 33% 81%);
+    animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
 
 .leg-4 .border {
@@ -1110,4 +1126,55 @@ lower-box {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     position: absolute;
+}
+
+/* ==================================================
+                 Spider Robot Animation
+================================================== */
+
+@keyframes head {
+	0%, 100% {
+		transform: translateY(0px);
+    }
+    50% {
+		transform: translateY(20px);
+    }
+}
+
+@keyframes walking {
+	0% {
+        transform: rotate(0deg);
+	}
+	25% {
+        transform: rotate(20deg);
+    }
+	50% {
+        transform: rotate(30deg);
+    }
+	75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+	}
+}
+
+
+
+@keyframes walking-b {
+	0% {
+        transform: rotate(0deg);
+	}
+	25% {
+        transform: rotate(-10deg);
+    }
+	50% {
+		transform: translateX(25px);
+    }
+	75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+	}
 }
